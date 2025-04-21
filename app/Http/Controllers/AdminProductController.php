@@ -12,7 +12,7 @@ class AdminProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin');
+        $this->middleware(\App\Http\Middleware\EnsureUserIsAdmin::class);
     }
 
     public function index()
