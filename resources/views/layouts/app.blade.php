@@ -20,9 +20,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'home') }}
-                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-purple-600">Home</a>
+                    <a href="{{ route('products.index') }}" class="text-gray-700 hover:text-purple-600">Producten</a>
+                    <a href="{{ route('contact.index') }}" class="text-gray-700 hover:text-purple-600">Contact</a>
+                </nav>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
